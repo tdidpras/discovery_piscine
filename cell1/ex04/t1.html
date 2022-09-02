@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basics</title>
+  <!--
+	Subject
+	  • Create a web page that contain the following elements:
+	  • A pink background (“Pink ? what’s wrong with pink ?”). Be cautious, this is not a random color choice.
+	  • “Basics” as the navigation tab’s title.
+	  • A title -so bigger- in white, centered, that contains at least 1 special character.
+	  • Two images side by side representing online shops.
+	  • Under each image, a link to the matching website.
+	  • Under that, a horizontal line that separates the page (no matter the size of the window).
+	  • Finally, under this line, aligned on the right side of the page, in italic and with a monospace font, the copyright symbol, your login, and the current year. (“© wil 2021”).
+	Note: this exercise should be consumed with moderation.
+	-->
+  <style>
+    body {
+      background-color: pink;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    a {
+      font-size: 0.8rem;
+      margin-top: 8px;
+    }
+
+    .container {
+      margin: 20px 10% 20px 10%
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .box {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      font-family: monospace;
+      font-style: italic;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Piscine WEB !!</h1>
+  <div class="container content">
+    <div class="box">
+      <img src="http://im.uniqlo.com/global-cms/spa/res042d198b12ed6883e17d4d56a04eae01fr.jpg" alt="ff-uniqlo">
+      <a href="https://www.uniqlo.com/th/th/spl/ut/final-fantasy/" target="_blank">
+        https://www.uniqlo.com/th/th/spl/ut/final-fantasy/
+      </a>
+    </div>
+    <div class="box">
+      <img
+        src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/02/Final-Fantasy-XIV-free-trial-webpage.jpg"
+        alt="ff-14">
+      <a href="https://freetrial.finalfantasyxiv.com/na/" target="_blank">
+        https://freetrial.finalfantasyxiv.com/na/
+      </a>
+    </div>
+  </div>
+  <hr>
+  <div class="container footer">
+    <p>© tsomsa 2022</p>
+  </div>
+</body>
+
+</html>

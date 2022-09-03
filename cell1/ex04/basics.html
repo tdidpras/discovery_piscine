@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Basics</title>
+    <style>
+      .box {
+        display: flex;
+        flex-direction: column;
+      }
 
-<head>
-  <title>Basics</title>
-</head>
+      .linkImg {
+        text-align: center;
+      }
+    </style>
+  </head>
 
-<body style="background-color: pink;">
-  <h1 style="text-align: center;font-size: 300%;">Cell01_ex04</h1>
-</body>
+  <body style="background-color: pink">
+    <h1 style="text-align: center; color: white; font-size: 300%">
+      Piscine Web :)
+    </h1>
+    <div style="display: flex; justify-content: center; gap: 30px">
+      <div class="box">
+        <img
+          src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/ca5d12864c12916c05640b36e47ac5c9.png"
+          alt="shopee img"
+          style="width: 500px; height: 300px; margin-bottom: 10px" />
+        <div class="linkImg">
+          <a href=" https://shopee.co.th/" target="_blank">
+            https://shopee.co.th/</a
+          >
+        </div>
+      </div>
+      <div class="box">
+        <img
+          src="https://assets.brandinside.asia/uploads/2019/06/Lazada-logo.jpg"
+          alt="lazada img"
+          style="width: 500px; height: 300px; margin-bottom: 10px" />
 
+        <div class="linkImg">
+          <a href=" https://www.lazada.co.th/" target="_blank"
+            >https://www.lazada.co.th/</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--horizontal line-->
+    <hr size="5" color="black" />
+    <div class="footer">
+      <p style="text-align: right">© tdidpras 2022</p>
+    </div>
+  </body>
 </html>

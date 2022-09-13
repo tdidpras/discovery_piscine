@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+}
+
+.bg-top {
+  background-image: url(https://github.com/tdidpras/color/blob/main/green.png?raw=true);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.bg-middle {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+
+.bg-bottom {
+  background-image: url(https://github.com/tdidpras/color/blob/main/red.png?raw=true);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-size: 50px;
+}

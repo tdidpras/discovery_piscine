@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+}
+
+.bg {
+  background-color: aqua;
+  width: 200px;
+
+}
+
+.topic {
+  margin-top: 10px;
+  font-family: monospace;
+  font-size: 40px;
+  text-align: center;
+}

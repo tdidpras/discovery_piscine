@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>todidpra</title>
+
+    <!-- CSS -->
+    <style>
+        /* Button */
+        .BtnBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            font-weight: bold;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        button:hover {
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+
+        /* List Todo */
+        .ft_list div {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(232, 232, 232);
+            border-radius: 10px;
+            margin: 10px;
+            border: solid 1px black;
+        }
+
+        .ft_list div:hover {
+            background-color: rgb(255, 0, 0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="tempLoad()">
+    <!-- Button -->
+    <div class="BtnBox">
+        <button class="newBtn" id="newBtn">
+            New
+        </button>
+    </div>
+    <hr>
+
+    <!-- Todo list -->
+    <div class="ft_list" id="ft_list"></div>
+
+    <!-- JS -->
+    <script src="todo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>todidpra</title>
+
+    <!-- CSS -->
+    <style>
+      .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .balloon {
+        background-color: red;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="balloon" id="balloon"></div>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <!-- JS  -->
+    <script>
+      let colorIndex = 0;
+      let colorSet = ["red", "green", "blue"];
+
+      $(document).ready(function () {
+        // click
+        $("div.balloon").click(function () {
+          // size
+          let h = parseInt($("div.balloon").css("height"));
+          h = h + 10;
+          if (h > 420) {
+            h = 200;
+          }
+          h = h.toString() + "px";
+          console.log("size: " + h);
+          $("div.balloon").css("height", h);
+          $("div.balloon").css("width", h);
+
+          // color
+          colorIndex = colorIndex == 2 ? (colorIndex = 0) : colorIndex + 1;
+          $("div.balloon").css("background-color", colorSet[colorIndex]);
+          console.log("color: " + colorSet[colorIndex]);
+          console.log("\n");
+        });
+
+        // mouse leave
+        // click
+        $("div.balloon").mouseleave(function () {
+          // size
+          let h = parseInt($("div.balloon").css("height"));
+          h = h - 5;
+          if (h < 200) {
+            return;
+          }
+          h = h.toString() + "px";
+          console.log("size: " + h);
+          $("div.balloon").css("height", h);
+          $("div.balloon").css("width", h);
+
+          // color
+          colorIndex = colorIndex == 0 ? (colorIndex = 2) : colorIndex - 1;
+          $("div.balloon").css("background-color", colorSet[colorIndex]);
+          console.log("color: " + colorSet[colorIndex]);
+          console.log("\n");
+        });
+      });
+    </script>
+  </body>
+</html>

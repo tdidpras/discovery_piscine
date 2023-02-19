@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>todidpra</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="background.css" />
+  </head>
+
+  <body>
+    <!-- button -->
+    <div class="bnt-container">
+      <button class="button-color" id="button-color">CLICK</button>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <!-- JS -->
+    <script>
+      $(document).ready(function () {
+        $("button.button-color").click(function () {
+          const char_set = "0123456789ABCDEF";
+          let color = "#";
+          for (let i = 0; i < 6; i++) {
+            color += char_set[Math.floor(Math.random() * 16)];
+          }
+          $("body").css("background-color", color);
+        });
+      });
+    </script>
+  </body>
+</html>

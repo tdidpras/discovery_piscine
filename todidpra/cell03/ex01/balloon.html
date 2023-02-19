@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>todidpra</title>
+
+    <!-- CSS -->
+    <style>
+        .balloon {
+            background-color: red;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            border-radius: 100%;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="balloon" id="balloon" onclick="inSize()" onmouseleave="outSize()"></div>
+
+    <!-- JS  -->
+    <script>
+        let colorIndex = 0;
+        let colorSet = ["red", "green", "blue"];
+
+        function inColor() {
+            colorIndex = colorIndex == 2 ? colorIndex = 0 : colorIndex + 1;
+            // colorIndex = colorIndex < 2 ? colorIndex + 1 : colorIndex = 0;
+            let getColor = document.getElementById("balloon");
+            getColor.style["background-color"] = colorSet[colorIndex];
+            console.log("color: " + colorSet[colorIndex]);
+            console.log("\n");
+        }
+
+        function inSize() {
+            // sizr
+            let getBalloon = document.getElementById("balloon");
+            let h = getBalloon.offsetHeight + 10;
+            let w = getBalloon.offsetWidth + 10;
+            console.log("hight: " + h, "width: " + w);
+            if (h > 420 && w > 420) {
+                let chgSize = document.getElementById("balloon");
+                chgSize.style.height = "200px"
+                chgSize.style.width = "200px"
+                return;
+            }
+            getBalloon.style.height = h.toString() + "px"
+            getBalloon.style.width = w.toString() + "px"
+
+            // color
+            inColor();
+        }
+
+        function outColor() {
+            colorIndex = colorIndex == 0 ? colorIndex = 2 : colorIndex - 1;
+            let getColor = document.getElementById("balloon");
+            getColor.style["background-color"] = colorSet[colorIndex];
+            console.log("color: " + colorSet[colorIndex]);
+            console.log("\n");
+        }
+
+        function outSize() {
+            // size
+            let getBalloon = document.getElementById("balloon");
+            let h = getBalloon.offsetHeight - 5;
+            let w = getBalloon.offsetWidth - 5;
+            console.log("hight: " + h, "width: " + w);
+            if (h < 200 && w < 200) {
+                let chgSize = document.getElementById("balloon");
+                chgSize.style.height = "200px"
+                chgSize.style.width = "200px"
+                return;
+            }
+            getBalloon.style.height = h.toString() + "px"
+            getBalloon.style.width = w.toString() + "px"
+
+            // color
+            outColor();
+        }
+    </script>
+</body>
+
+</html>

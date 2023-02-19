@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>todidpra</title>
+
+    <!-- CSS -->
+    <style>
+        h1.calc {
+            display: flex;
+            justify-content: center;
+            font-size: 35px;
+        }
+
+        table {
+            display: flex;
+            justify-content: center;
+        }
+
+        input,
+        select,
+        button {
+            margin: 5px;
+            background-color: rgb(230, 230, 230);
+            padding: 8px 5px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        select:hover {
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="calc">
+        Calculator
+    </h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <input class="inputL" type="text">
+                </td>
+                <td>
+                    <select name="sign" id="sign">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                </td>
+                <td>
+                    <input class="inputR" type="text">
+                </td>
+                <td>
+                    <button onclick="sendBtn()">
+                        Try me!
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- JS -->
+    <script>
+        let time = 0;
+        const count = setInterval(function () {
+            time = time + 1;
+            if (time >= 30) { // 30 sec
+                time = 0;
+                console.log('Please, use me...');
+                alert('Please, use me...');
+            }
+        }, 1000);
+
+        function sendBtn() {
+            let L = document.querySelector(".inputL").value;
+            let R = document.querySelector(".inputR").value;
+            let sign = document.querySelector("#sign").value;
+            L = parseInt(L);
+            R = parseInt(R);
+
+            if (isNaN(L) || isNaN(R) || L < 0 || R < 0) {
+                console.log("Error :(");
+                alert("Error :(");
+                return;
+            }
+
+            if (sign == "+") {
+                let val = L + R;
+                console.log(val);
+                alert(val);
+                return;
+            }
+
+            if (sign == "-") {
+                let val = L - R;
+                console.log(val);
+                alert(val);
+                return;
+            }
+
+            if (sign == "*") {
+                let val = L * R;
+                console.log(val);
+                alert(val);
+                return;
+            }
+
+            if (sign == "/") {
+                let val = L / R;
+                val = isFinite(val) ? val : "It's over 9000!";
+                console.log(val);
+                alert(val);
+                return;
+            }
+
+            if (sign == "%") {
+                let val = L % R;
+                val = isNaN(val) ? "It's over 9000!" : val;
+                console.log(val);
+                alert(val);
+                return;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

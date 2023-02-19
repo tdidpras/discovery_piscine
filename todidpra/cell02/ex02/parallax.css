@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+}
+
+.bg-top {
+  border-collapse: collapse;
+  background-image: url(https://wallpaperaccess.com/full/1713248.jpg);
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.bg-middle {
+  border-collapse: collapse;
+  background-color: black;
+  height: 50vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+
+.bg-bottom {
+  border-collapse: collapse;
+  background-image: url(https://wallpaperaccess.com/full/1126865.jpg);
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}

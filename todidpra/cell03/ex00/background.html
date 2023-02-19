@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cellude3.0</title>
+    <link rel="stylesheet" href="background.css" />
+  </head>
+  <body>
+    <div class="bnt-container">
+      <button class="button-color" onclick="RandomColor()">CLICK</button>
+    </div>
+  </body>
+  <script>
+    function RandomColor() {
+      const char_set = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += char_set[Math.floor(Math.random() * 16)];
+      }
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</html>
